@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Skillphere - Learn new skills, grow your potential and succeed in your career.">
+<title>Skillphere | Learn, Grow & Succeed</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--orange:#ff7138;
+--orange2:#ff925f;
+--dark:#172238;
+--text:#566174;
+--light:#fff7f2;
+--border:#eeeef2;
+--white:#fff;
+--shadow:0 15px 45px rgba(23,34,56,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);background:#fff;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+.container{width:min(1160px,90%);margin:auto}
+section{scroll-margin-top:85px}
+.section{padding:90px 0}
+.muted{color:var(--text)}
+
+.btn{
+display:inline-flex;align-items:center;justify-content:center;gap:9px;
+padding:13px 22px;border-radius:9px;border:0;font-weight:700;
+font-size:14px;transition:.3s
+}
+.primary{background:var(--orange);color:white;box-shadow:0 7px 20px #ff713833}
+.primary:hover{background:#e85b25;transform:translateY(-3px)}
+.outline{background:white;border:1px solid var(--border);color:var(--dark)}
+.outline:hover{border-color:var(--orange);color:var(--orange)}
+.eyebrow{font-size:12px;font-weight:800;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:13px}
+.heading{text-align:center;max-width:650px;margin:0 auto 45px}
+.heading h2{font-size:clamp(30px,4vw,43px);line-height:1.2;margin-bottom:13px}
+.heading p{color:var(--text);font-size:14px;line-height:1.8}
+
+/* NAVBAR */
+header{
+position:sticky;top:0;z-index:1000;background:#ffffffed;
+backdrop-filter:blur(15px);border-bottom:1px solid var(--border)
+}
+.navbar{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Outfit';font-size:26px;font-weight:800;letter-spacing:-1px}
+.logo span{color:var(--orange)}
+.logo-icon{background:var(--orange);color:white;padding:8px;border-radius:9px;margin-right:5px;font-size:17px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13px;font-weight:700;color:#626e80;transition:.3s}
+.nav-links a:hover{color:var(--orange)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-actions .login{font-size:13px;font-weight:700}
+.menu{display:none;background:none;border:0;font-size:23px;color:var(--dark)}
+
+/* HERO */
+.hero{
+background:linear-gradient(120deg,#fff8f3,#fff 60%,#fff0e7);
+padding:90px 0;position:relative;overflow:hidden
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+.tag{
+display:inline-flex;gap:9px;align-items:center;padding:9px 14px;
+background:#ffede4;color:#e6602c;border-radius:30px;font-size:11px;
+font-weight:800;letter-spacing:1px;margin-bottom:24px
+}
+.hero h1{font-size:clamp(43px,5.5vw,67px);line-height:1.07;letter-spacing:-2px;margin-bottom:22px}
+.hero h1 span{color:var(--orange)}
+.hero-description{color:var(--text);font-size:15px;line-height:1.9;max-width:490px;margin-bottom:29px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{display:flex;align-items:center;gap:14px;margin-top:35px}
+.avatar-group{display:flex}
+.avatar-group img{width:34px;height:34px;border-radius:50%;border:3px solid white;margin-left:-9px}
+.avatar-group img:first-child{margin-left:0}
+.hero-note p{font-size:11px;color:var(--text)}
+.hero-note strong{font-size:13px;color:var(--dark)}
+.hero-image-wrap{position:relative;padding:12px}
+.hero-image{width:100%;height:420px;object-fit:cover;border-radius:27px;box-shadow:var(--shadow)}
+.float-card{
+position:absolute;background:white;padding:16px;border-radius:13px;
+box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;
+animation:float 4s ease-in-out infinite
+}
+.float-card.one{top:48px;left:-12px}
+.float-card.two{bottom:48px;right:-10px;animation-delay:1s}
+.float-icon{width:42px;height:42px;border-radius:11px;background:#fff0e8;color:var(--orange);display:grid;place-items:center;font-size:18px}
+.float-card strong{display:block;font-size:13px}
+.float-card small{font-size:10px;color:var(--text)}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* STATS */
+.stats{padding:35px 0;border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:15px}
+.stat h3{font-size:34px;color:var(--orange)}
+.stat p{font-size:12px;color:var(--text);margin-top:5px}
+
+/* CATEGORIES */
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
+.category{
+padding:25px 20px;border:1px solid var(--border);border-radius:15px;
+transition:.3s;cursor:pointer;background:white
+}
+.category:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#ffd1bd}
+.cat-icon{width:49px;height:49px;display:grid;place-items:center;border-radius:13px;font-size:21px;margin-bottom:18px}
+.category h3{font-size:16px;margin-bottom:7px}
+.category p{font-size:11px;color:var(--text)}
+
+/* COURSES */
+.courses-section{background:#fafbfc}
+.toolbar{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:28px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{
+padding:9px 16px;border-radius:30px;background:white;border:1px solid var(--border);
+font-size:11px;font-weight:700;color:var(--text)
+}
+.filter.active,.filter:hover{background:var(--orange);border-color:var(--orange);color:white}
+.search{display:flex;gap:9px;background:white;border:1px solid var(--border);border-radius:8px;padding:10px 13px}
+.search input{border:0;outline:0;font-family:inherit;width:175px}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.course{border:1px solid var(--border);background:white;border-radius:15px;overflow:hidden;transition:.3s}
+.course:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.course-img{height:195px;position:relative}
+.course-img img{width:100%;height:100%;object-fit:cover}
+.level{position:absolute;top:13px;left:13px;background:white;padding:6px 10px;border-radius:5px;font-size:10px;font-weight:800}
+.course-body{padding:19px}
+.course-meta{display:flex;justify-content:space-between;font-size:10px;color:var(--text);margin-bottom:13px}
+.rating{color:#e9a72f}
+.course h3{font-size:18px;line-height:1.4;margin-bottom:9px}
+.course-body>p{font-size:11px;line-height:1.8;color:var(--text);margin-bottom:16px}
+.teacher{display:flex;align-items:center;gap:9px;padding-bottom:15px;border-bottom:1px solid var(--border);font-size:11px;color:var(--text)}
+.teacher img{width:29px;height:29px;border-radius:50%}
+.course-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:14px}
+.price{font-weight:800;font-size:19px}
+.price del{font-size:11px;color:#9ca3af;font-weight:400}
+.enroll{border:0;background:#fff0e8;color:var(--orange);padding:10px 13px;border-radius:7px;font-weight:800;font-size:11px}
+.enroll:hover{background:var(--orange);color:white}
+.no-results{display:none;grid-column:1/-1;text-align:center;padding:30px;color:var(--text)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+.about-image{width:100%;height:440px;object-fit:cover;border-radius:22px}
+.about-content h2{font-size:40px;line-height:1.2;margin-bottom:17px}
+.about-content>p{font-size:13px;color:var(--text);line-height:1.9;margin-bottom:25px}
+.benefit{display:flex;gap:14px;margin-bottom:20px}
+.benefit-icon{min-width:43px;height:43px;border-radius:11px;background:#fff0e8;color:var(--orange);display:grid;place-items:center}
+.benefit h4{font-size:15px;margin-bottom:5px}
+.benefit p{font-size:11px;color:var(--text);line-height:1.7}
+
+/* PATH */
+.path-section{background:#172238;color:white}
+.path-section .heading p{color:#b3bdcd}
+.path-grid{display:grid;grid-template-columns:repeat(3,1fr
